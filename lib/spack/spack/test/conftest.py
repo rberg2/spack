@@ -1023,6 +1023,9 @@ class MockPackage(object):
         self.conflicts = {}
         self.patches = {}
 
+    def provides(self, vname):
+        return vname in self.provided
+
 
 class MockPackageMultiRepo(object):
     def __init__(self, packages):
